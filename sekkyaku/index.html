@@ -51,7 +51,7 @@ const FAQ = [
 ];
 
 const css = `
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap');
 :root {
   --red: #C41E24;
   --red-light: #E8383D;
@@ -74,7 +74,7 @@ const css = `
 html { scroll-behavior: smooth; }
 body { font-family: 'Noto Sans JP', sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
 
-.zen { font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif; }
+.zen { font-family: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif; }
 
 /* Header - compact navy, only element with dark bg */
 .header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(27,42,74,0.95); backdrop-filter:blur(8px); padding:10px 16px; display:flex; align-items:center; justify-content:space-between; }
@@ -352,10 +352,13 @@ function App() {
               今日で終わりにしませんか？
             </h1>
             <p className="sub">文法不要。開いた瞬間、接客成立。</p>
-            <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:16}}>
+            <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:4}}>
               <span style={{fontSize:11,color:'var(--text-sub)'}}>Kindle</span>
               <span style={{fontSize:22,fontWeight:900,color:'var(--red)'}}>¥1,180</span>
               <span style={{fontSize:11,color:'var(--text-sub)'}}>＋税 / 音声つき</span>
+            </div>
+            <div style={{marginBottom:16}}>
+              <span style={{fontSize:12,fontWeight:700,color:'var(--navy)',background:'var(--yellow-light)',padding:'3px 8px',borderRadius:4}}>Kindle Unlimited 0円</span>
             </div>
           </div>
           <div className="book-scene" style={{flexShrink:0,padding:0,marginRight:-8}}>
@@ -393,16 +396,16 @@ function App() {
         <div className="ba-card ba-before">
           <div className="ba-label">😰 BEFORE ─ よくある悩み</div>
           <img className="ba-img" src="ba-before.png" alt="Before: 翻訳アプリが読み込み中で困る店員" style={{width:'100%',borderRadius:8,marginBottom:12}} />
-          <div className="ba-item">「何か聞かれているけど聞き取れない…」</div>
-          <div className="ba-item">「伝えたいのは一言なのに、日本語しか出てこない」</div>
-          <div className="ba-item">「翻訳アプリのロード中、笑顔が固まる…」</div>
+          <div className="ba-item">• 何か聞かれているけど聞き取れない…</div>
+          <div className="ba-item">• 伝えたいのは一言なのに、日本語しか出てこない</div>
+          <div className="ba-item">• 翻訳アプリのロード中、笑顔が固まる…</div>
         </div>
         <div className="ba-card ba-after">
-          <div className="ba-label">😊 AFTER ─ この本があれば</div>
+          <div className="ba-label">😊 AFTER ─ ひとこと中国語で伝わる接客</div>
           <img className="ba-img" src="ba-after.png" alt="After: 本を見せながら笑顔で接客する店員" style={{width:'100%',borderRadius:8,marginBottom:12}} />
-          <div className="ba-item">「いらっしゃいませ」〜「会計」まで流れが止まらない！</div>
-          <div className="ba-item">「試着」「包装」「免税」、指差し＆カタカナ読みで即解決</div>
-          <div className="ba-item">トラブル時も「責任者を呼びます」の一言でパニック回避</div>
+          <div className="ba-item">•「いらっしゃいませ」〜「会計」までスムーズに対応</div>
+          <div className="ba-item">•「試着」「包装」「免税」、指差し＆カタカナ読みで即解決</div>
+          <div className="ba-item">• トラブル時も「責任者を呼びます」の一言でパニック回避</div>
         </div>
       </section>
 
