@@ -221,6 +221,43 @@ body { font-family: 'Noto Sans JP', sans-serif; background: var(--cream); color:
 
 @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
 .fade-up { animation: fadeUp 0.5s ease-out forwards; }
+
+/* === Desktop (768px+) === */
+@media (min-width: 768px) {
+  /* Global: constrain content width */
+  .hero, .ba-section, .features, .scenes, .author, .faq-section, .audio-section, .final-cta { max-width:720px; margin-left:auto; margin-right:auto; }
+
+  /* Hero: center text + book */
+  .hero { padding:88px 40px 40px; }
+  .hero-content { justify-content:center; align-items:center; gap:40px; }
+  .hero h1 { font-size:28px; }
+  .book { width:180px; height:270px; }
+  .book__cover { transform:translateZ(16px); }
+  .book__spine { width:32px; transform:rotateY(-90deg) translateX(-16px) translateZ(0); }
+  .book__back { transform:translateZ(-16px); }
+  .book__pages-top { height:32px; transform:rotateX(90deg) translateY(-16px); }
+  .book__pages-bottom { height:32px; transform:rotateX(-90deg) translateY(16px); }
+  .book__pages-right { width:32px; transform:rotateY(90deg) translateX(16px); }
+  .hero-ctas { flex-direction:row; justify-content:center; }
+  .cta-main { min-width:240px; }
+
+  /* Before/After: constrain image width */
+  .ba-img { max-width:60%; display:block; margin-left:auto; margin-right:auto; }
+
+  /* Scenes: 3 columns on desktop */
+  .scene-grid { grid-template-columns: 1fr 1fr 1fr; }
+
+  /* Section titles slightly larger */
+  .section-title { font-size:24px; }
+}
+
+/* === Wide desktop (1024px+) === */
+@media (min-width: 1024px) {
+  .hero, .ba-section, .features, .scenes, .author, .faq-section, .audio-section, .final-cta { max-width:880px; }
+  .hero h1 { font-size:32px; }
+  .hero .sub { font-size:16px; }
+  .book { width:200px; height:300px; }
+}
 `;
 
 // Compact audio data for the player
@@ -307,7 +344,7 @@ function App() {
       <section className="hero">
         <div className="hero-deco" />
         <div className="hero-badge">📖 Kindle 好評発売中</div>
-        <div style={{display:'flex',gap:16,alignItems:'flex-start'}}>
+        <div className="hero-content" style={{display:'flex',gap:16,alignItems:'flex-start'}}>
           <div style={{flex:1}}>
             <h1 className="zen">
               「あ、中国のお客様だ…」<br/>
@@ -355,14 +392,14 @@ function App() {
         <div className="section-subtitle">こんな経験、ありませんか？</div>
         <div className="ba-card ba-before">
           <div className="ba-label">😰 BEFORE ─ よくある悩み</div>
-          <img src="ba-before.png" alt="Before: 翻訳アプリが読み込み中で困る店員" style={{width:'100%',borderRadius:8,marginBottom:12}} />
+          <img className="ba-img" src="ba-before.png" alt="Before: 翻訳アプリが読み込み中で困る店員" style={{width:'100%',borderRadius:8,marginBottom:12}} />
           <div className="ba-item">「何か聞かれているけど聞き取れない…」</div>
           <div className="ba-item">「伝えたいのは一言なのに、日本語しか出てこない」</div>
           <div className="ba-item">「翻訳アプリのロード中、笑顔が固まる…」</div>
         </div>
         <div className="ba-card ba-after">
           <div className="ba-label">😊 AFTER ─ この本があれば</div>
-          <img src="ba-after.png" alt="After: 本を見せながら笑顔で接客する店員" style={{width:'100%',borderRadius:8,marginBottom:12}} />
+          <img className="ba-img" src="ba-after.png" alt="After: 本を見せながら笑顔で接客する店員" style={{width:'100%',borderRadius:8,marginBottom:12}} />
           <div className="ba-item">「いらっしゃいませ」〜「会計」まで流れが止まらない！</div>
           <div className="ba-item">「試着」「包装」「免税」、指差し＆カタカナ読みで即解決</div>
           <div className="ba-item">トラブル時も「責任者を呼びます」の一言でパニック回避</div>
