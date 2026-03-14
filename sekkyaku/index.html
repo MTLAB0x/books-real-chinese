@@ -138,6 +138,7 @@ body { font-family: 'Noto Sans JP', sans-serif; background: var(--cream); color:
 .feature-num { display:inline-block; background:var(--red); color:white; width:28px; height:28px; border-radius:50%; text-align:center; line-height:28px; font-size:13px; font-weight:900; margin-bottom:10px; }
 .feature-card h3 { font-size:16px; font-weight:900; color:var(--red); margin-bottom:8px; line-height:1.4; }
 .feature-card p { font-size:13px; color:var(--text-sub); line-height:1.7; }
+.feature-img { width:120px; height:120px; display:block; margin:0 auto 12px; }
 
 /* Scenes */
 .scenes { padding:40px 16px; background:var(--warm-white); }
@@ -424,16 +425,19 @@ function App() {
       <section className="features">
         <div className="section-title zen" style={{marginBottom:24}}>「教科書」ではありません。<br/>「現場の道具」です。</div>
         <div className="feature-card">
+          <img src="feature-1.png" alt="勉強不要" className="feature-img" />
           <div className="feature-num">1</div>
           <h3>「勉強する時間がない」を前提に作りました</h3>
           <p>完璧な発音や文法は不要。カタカナ読みを見て、音声をマネするだけ。忙しい現場のあなたが、通勤中や休憩時間だけで使えるようになる設計です。</p>
         </div>
         <div className="feature-card">
+          <img src="feature-2.png" alt="1ページ完結" className="feature-img" />
           <div className="feature-num">2</div>
           <h3>1ページ1シーン完結の「超・即戦力」設計</h3>
           <p>左に日本語、右に中国語・カタカナ。パッと見てその場で口に出せるレイアウト。ページを開いた瞬間に「接客対応が成立する」設計です。</p>
         </div>
         <div className="feature-card">
+          <img src="feature-3.png" alt="スマホ＋音声" className="feature-img" />
           <div className="feature-num">3</div>
           <h3>スマホで完結。全フレーズ音声つき</h3>
           <p>レジ横で確認、通勤中に聞き流し。QRで音声に直結。1,709の音声ファイルをウェブで聞くことも、ダウンロードすることも可能です。</p>
