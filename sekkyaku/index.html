@@ -98,6 +98,7 @@ body { font-family: 'Noto Sans JP', sans-serif; background: var(--cream); color:
 .cta-audio { background:white; color:var(--red); border:2px solid var(--red); }
 .hero-skip { text-align:center; padding:12px; background:var(--yellow-light); border-radius:8px; margin-top:4px; border:1px solid rgba(245,166,35,0.3); }
 .hero-skip a { color:var(--navy); font-size:13px; font-weight:700; text-decoration:none; }
+.hero-skip a + a { border-left:1px solid rgba(27,42,74,0.3); padding-left:16px; }
 .hero-stats { display:flex; gap:16px; justify-content:center; margin-top:20px; flex-wrap:wrap; }
 .stat { text-align:center; background:white; padding:10px 14px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
 .stat-num { color:var(--red); font-size:22px; font-weight:900; display:block; }
@@ -391,8 +392,9 @@ function App() {
           <a href={KINDLE_URL} className="cta-main cta-buy">📖 Kindleで今すぐ手に入れる</a>
           <button className="cta-main cta-audio" onClick={scrollToAudio}>🔊 音声を聞く</button>
         </div>
-        <div className="hero-skip">
+        <div className="hero-skip" style={{display:'flex',justifyContent:'center',gap:16,flexWrap:'wrap'}}>
           <a href="#audio-section" onClick={(e)=>{e.preventDefault();scrollToAudio();}}>📥 mp3ダウンロードはこちら</a>
+          {(()=>{const now=new Date();const start=new Date('2026-04-20');const end=new Date('2026-05-21');return now>=start&&now<end?<a href="download/sekkyaku-chinese-bonus.zip" download>🎁 予約特典はこちら</a>:null;})()}
         </div>
         <div className="hero-stats">
           <div className="stat"><span className="stat-num">1,500+</span><span className="stat-label">フレーズ</span></div>
