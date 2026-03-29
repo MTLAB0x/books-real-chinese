@@ -19,6 +19,7 @@
     const { useState, useRef, useEffect } = React;
 const AUDIO_BASE = "https://books.real-chinese.org/sekkyaku/audio/";
 const KINDLE_URL = "https://www.amazon.co.jp/dp/B0GT2Q7QF8";
+const IS_RELEASED = new Date() >= new Date('2026-04-20');
 const CHAPTERS = [
   {id:"01",short:"基本",name:"接客の基本表現",icon:"🗣️",catCount:9,trackCount:29,fileCount:313},
   {id:"02",short:"会話",name:"お客様と会話が弾む表現",icon:"💬",catCount:5,trackCount:11,fileCount:131},
@@ -356,7 +357,7 @@ function App() {
       {/* Hero */}
       <section className="hero">
         <div className="hero-deco" />
-        <div className="hero-badge">📖 Kindle 好評発売中</div>
+        <div className="hero-badge">{IS_RELEASED ? '📖 Kindle 好評発売中' : '📖 4/20 Kindle発売 ─ 予約受付中'}</div>
         <div className="hero-content" style={{display:'flex',gap:16,alignItems:'flex-start'}}>
           <div style={{flex:1}}>
             <h1 className="zen">
@@ -389,7 +390,7 @@ function App() {
           <span style={{fontSize:15,fontWeight:900,color:'var(--navy)'}}>Kindle Unlimited会員は<span style={{color:'var(--red)',fontSize:20}}>今すぐ0円</span>で読めます</span>
         </div>
         <div className="hero-ctas">
-          <a href={KINDLE_URL} className="cta-main cta-buy">📖 Kindleで今すぐ手に入れる</a>
+          <a href={KINDLE_URL} className="cta-main cta-buy">{IS_RELEASED ? '📖 Kindleで今すぐ手に入れる' : <span>📖 Kindleで予約する<br/><span style={{fontSize:12,fontWeight:400,opacity:0.9}}>4/20 発売</span></span>}</a>
           <button className="cta-main cta-audio" onClick={scrollToAudio}>🔊 音声を聞く</button>
         </div>
         <div className="hero-skip" style={{display:'flex',justifyContent:'center',gap:16,flexWrap:'wrap'}}>
@@ -488,7 +489,7 @@ function App() {
       <section className="cta-mid">
         <h2 className="zen">今、準備すれば、<br/>明日の接客が変わります。</h2>
         <p>まずは一言から、始めてみませんか？</p>
-        <a href={KINDLE_URL} className="cta-mid-btn">📖 Kindleで購入する</a>
+        <a href={KINDLE_URL} className="cta-mid-btn">{IS_RELEASED ? '📖 Kindleで購入する' : <span>📖 Kindleで予約する<br/><span style={{fontSize:12,fontWeight:400}}>4/20 発売</span></span>}</a>
         <div className="cta-mid-price">¥1,180＋税 ・ 音声つき</div>
       </section>
 
