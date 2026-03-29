@@ -394,7 +394,7 @@ function App() {
         </div>
         <div className="hero-skip" style={{display:'flex',justifyContent:'center',gap:16,flexWrap:'wrap'}}>
           <a href="#audio-section" onClick={(e)=>{e.preventDefault();scrollToAudio();}}>📥 mp3ダウンロードはこちら</a>
-          {(()=>{const now=new Date();const start=new Date('2026-04-20');const end=new Date('2026-05-21');return now>=start&&now<end?<a href="download/sekkyaku-chinese-bonus.zip" download>🎁 予約特典はこちら</a>:null;})()}
+          {(()=>{const now=new Date();const start=new Date('2026-04-07');const end=new Date('2026-04-21');if(now<start)return <span style={{fontSize:12,color:'var(--text-sub)'}}>🎁 DL可能期間：4/7〜4/20</span>;if(now>=start&&now<end)return <a href="download/sekkyaku-chinese-bonus.zip" download>🎁 予約特典はこちら（4/20 23:59まで）</a>;return null;})()}
         </div>
         <div className="hero-stats">
           <div className="stat"><span className="stat-num">1,500+</span><span className="stat-label">フレーズ</span></div>
