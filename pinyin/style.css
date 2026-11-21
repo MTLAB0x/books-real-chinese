@@ -14,6 +14,7 @@
 
 @font-face{font-family:'MPR Latin';src:url(assets/mpr-latin-700.woff2) format('woff2');font-weight:500 900;font-display:swap}
 .pinyin{font-family:'MPR Latin',Nunito,sans-serif}
+h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 /* 2026-11-18: icons as SVG, larger small text and tap targets, audio guide, app stat */
 .ico{width:1em;height:1em;flex:none;display:inline-block;vertical-align:-.12em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .ico.fill{fill:currentColor;stroke:none}
