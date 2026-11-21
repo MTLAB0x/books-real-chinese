@@ -1,0 +1,4 @@
+mpr-latin-700.woff2 is a subset (Latin and pinyin letters only) of "M PLUS Rounded 1c" Bold.
+Copyright 2016 The Rounded M+ Project Authors.
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is available with a FAQ at: https://openfontlicense.org

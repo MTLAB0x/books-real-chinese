@@ -1,0 +1,43 @@
+@font-face{font-family:'MPR Latin';src:url(../assets/mpr-latin-700.woff2) format('woff2');font-weight:500 900;font-display:swap}
+:root{--yellow:#f6cc42;--orange:#f08c2e;--blue:#54aecc;--sky:#eaf5f9;--ink:#3b3734;--muted:#70675e;--cream:#fff9e6;--line:#e8e1d7;--paper:#fffefb;--navy:#2e3642}
+*{box-sizing:border-box}html{scroll-padding-top:76px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Zen Maru Gothic','Hiragino Maru Gothic ProN',sans-serif;font-weight:500;font-size:16px;line-height:1.7;padding-bottom:86px}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer;border:0}
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+a:focus-visible,button:focus-visible{outline:3px solid #147594;outline-offset:3px}
+h1,h2,p,ul{margin:0}ul{padding:0;list-style:none}
+.ico{width:1em;height:1em;flex:none;fill:currentColor}.ico.line{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.top{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:0 16px;min-height:56px}
+.top a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:13px;font-weight:700}
+main{width:min(720px,100%);margin-inline:auto;padding:0 16px 8px}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--yellow);margin:0 -16px;padding:22px 20px 20px;border-radius:0 0 28px 28px}
+.hero .day{font-size:13px;font-weight:700}.hero h1{font-size:27px;line-height:1.4;font-weight:700;letter-spacing:.02em;text-wrap:balance}
+.hero .sec{font-family:Nunito,sans-serif;font-weight:800;margin-right:12px}.hero .lead{font-size:13px;margin-top:4px}
+.hero img{width:76px;height:auto;flex:none}
+.group{margin-top:26px}.group h2{font-size:18px;font-weight:700;padding:0 4px 6px;display:flex;align-items:baseline;gap:12px}
+.group h2 small{font-size:13px;color:var(--muted)}.group>.hint{display:block;padding:0 4px 8px}
+.rows{border-top:1px solid var(--line)}
+.row{display:flex;align-items:center;gap:10px;padding:10px 6px;border-bottom:1px solid var(--line);scroll-margin-top:90px}
+.meta{flex:1;min-width:0;display:flex;flex-direction:column}
+.num{font-family:Nunito,sans-serif;font-weight:800;font-size:13px;color:var(--muted);letter-spacing:.01em}
+.txt{font-family:'MPR Latin','Zen Maru Gothic','Hiragino Maru Gothic ProN',sans-serif;font-size:18px;font-weight:700;line-height:1.5;overflow-wrap:anywhere}
+.zh{font-family:'MPR Latin','PingFang SC','Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',sans-serif}
+.hint{font-size:12px;color:var(--muted)}
+.btns{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;flex:none;max-width:56%}
+.play{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;min-width:78px;padding:0 14px;border-radius:999px;background:var(--sky);font-size:13px;font-weight:700;transition:background .15s}
+.play:hover{background:#d7ecf3}.play.is-playing{background:var(--blue)}.play.is-error{background:#fbe1e1}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:8px}
+.chip{scroll-margin-top:90px;border-radius:999px}.chip .play{width:100%;justify-content:flex-start;padding:0 16px;gap:10px}.chip .num{color:var(--ink);font-size:14px}
+.row.is-target{background:#fff4c2;border-radius:14px;border-bottom-color:transparent}.chip.is-target .play{background:#fff4c2;box-shadow:inset 0 0 0 2px var(--yellow)}.chip.is-target .play.is-playing{background:var(--blue)}
+.toc{border-top:1px solid var(--line)}.toc a{display:flex;align-items:center;gap:14px;min-height:60px;padding:8px 6px;border-bottom:1px solid var(--line)}
+.toc .sec{font-family:Nunito,sans-serif;font-weight:800;font-size:15px;min-width:64px;color:var(--muted)}.toc .name{flex:1;font-size:17px;font-weight:700}.toc a:hover{background:var(--cream)}
+.pager{display:flex;gap:10px;margin:34px 0 12px}
+.step{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:10px;min-height:64px;padding:8px 16px;border-radius:18px;border:1.5px solid var(--ink);background:#fff}
+.step span{flex:1;min-width:0;display:flex;flex-direction:column}.step small{font-size:12px;font-weight:700;color:var(--muted)}.step b{font-size:15px;font-weight:700;line-height:1.4}.step i{font-style:normal;font-family:Nunito,sans-serif;font-weight:800;margin-right:8px}
+.step.next{background:var(--yellow);border-color:var(--yellow);text-align:right}.step.next:hover{background:#f2c22e}.step.prev:hover{background:var(--cream)}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;border:1.5px solid var(--ink);background:#fff;font-size:14px;font-weight:700;font-family:Nunito,'Zen Maru Gothic',sans-serif}
+.pill.solid{border:0;background:var(--orange);min-height:44px;padding:0 16px;font-size:13px;flex:none}
+.book-bar{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--cream);border-top:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:10px 16px}
+.book-bar img{width:32px;height:auto;border-radius:3px;flex:none}.book-bar p{flex:1;font-size:13px;font-weight:700;line-height:1.5}
+@media(max-width:420px){.hero h1{font-size:23px}.step{padding:8px 12px}.step b{font-size:14px}.btns{max-width:none}.row:has(.play:nth-child(3)){flex-direction:column;align-items:stretch}.row:has(.play:nth-child(3)) .btns{justify-content:flex-start}.play{min-width:72px;padding:0 12px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
