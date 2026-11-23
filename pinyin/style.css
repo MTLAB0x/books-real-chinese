@@ -42,6 +42,7 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .audio-how .button{width:min(100%,380px)}
 .app-stat{font-size:14px;font-weight:700;margin-top:14px!important}
 .app-stat b{font:800 26px Nunito,sans-serif;margin:0 2px}
+.app-stat-date{display:block;font-size:12px;font-weight:500;color:var(--muted);margin-top:2px}
 @media(max-width:760px){.audio-how{padding:26px 20px;margin-top:38px}.audio-how .how-head h3{font-size:22px}.how-head img{width:72px}.how-steps li{padding-left:46px}.how-steps b{font-size:17px}.audio-how .button{width:100%}.hero-bottom{gap:10px;flex-wrap:wrap}.nav-cta{padding:0 12px}.brand small{letter-spacing:0}.book-tag{width:88px;height:88px;font-size:12px;line-height:1.5;right:0}}
 @media(max-width:360px){.brand small{display:none}}
 .conversation-panda{align-items:flex-start;gap:8px}
