@@ -69,3 +69,18 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .hero-bottom i{background:#ffd83a}
 .hero-bottom span:last-child{color:#ffd83a}
 @media(max-width:760px){.hero h1{font-size:clamp(30px,9.4vw,54px);line-height:1.4}.hero-bottom{font-size:13px;gap:12px;padding:16px 10px}}
+
+/* purchase section as a key visual (same look as the hero) */
+.purchase{position:relative;background:linear-gradient(180deg,#ffd83a 0%,#ffd83a 45%,#f7b500 100%);color:#222}
+.purchase::before{content:"你好 谢谢 再见 请问 多少钱 对不起 没关系 好吃 你好 谢谢 再见 请问 多少钱 对不起";position:absolute;left:-30px;right:-30px;top:-24px;height:100%;overflow:hidden;font:900 clamp(84px,12.5vw,180px)/1.22 'PingFang SC','Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',sans-serif;color:rgba(226,150,0,.13);word-spacing:.18em;pointer-events:none}
+.purchase-layout{position:relative}
+.purchase h2{font-family:'M PLUS Rounded 1c','Zen Maru Gothic','Hiragino Maru Gothic ProN',sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,56px);line-height:1.38;letter-spacing:-.04em;color:#222;white-space:nowrap;text-shadow:0.085em 0.000em 0 #fff,0.081em 0.026em 0 #fff,0.069em 0.050em 0 #fff,0.050em 0.069em 0 #fff,0.026em 0.081em 0 #fff,0.000em 0.085em 0 #fff,-0.026em 0.081em 0 #fff,-0.050em 0.069em 0 #fff,-0.069em 0.050em 0 #fff,-0.081em 0.026em 0 #fff,-0.085em 0.000em 0 #fff,-0.081em -0.026em 0 #fff,-0.069em -0.050em 0 #fff,-0.050em -0.069em 0 #fff,-0.026em -0.081em 0 #fff,-0.000em -0.085em 0 #fff,0.026em -0.081em 0 #fff,0.050em -0.069em 0 #fff,0.069em -0.050em 0 #fff,0.081em -0.026em 0 #fff,0.045em 0.000em 0 #fff,0.036em 0.026em 0 #fff,0.014em 0.043em 0 #fff,-0.014em 0.043em 0 #fff,-0.036em 0.026em 0 #fff,-0.045em 0.000em 0 #fff,-0.036em -0.026em 0 #fff,-0.014em -0.043em 0 #fff,0.014em -0.043em 0 #fff,0.036em -0.026em 0 #fff,0 .16em 0 rgba(0,0,0,.14)}
+.purchase h2 .accent{color:#d9503f}
+.purchase .kicker{font-size:15px}
+.purchase .book-title{font-size:22px}
+.purchase-copy .book-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:20px!important;font-size:15px!important;font-weight:700}
+.book-meta strong{background:#fff;color:#d9503f;border-radius:100px;padding:6px 20px;font-size:19px;box-shadow:0 4px 0 rgba(0,0,0,.1)}
+.button.red{background:#d9503f;color:#fff;box-shadow:0 5px 0 #a8382b;font-size:18px;padding:19px 40px;min-height:66px}
+.purchase-copy>.button{margin-top:22px}
+@media(min-width:761px){.purchase-art{min-height:470px}.purchase-cover{width:270px;left:20px}.purchase-panda{width:185px;right:0;bottom:0}}
+@media(max-width:760px){.purchase h2{font-size:clamp(28px,8.6vw,50px);line-height:1.42}.button.red{font-size:16px;padding:16px 24px;min-height:58px}.book-meta strong{font-size:17px}}

@@ -77,7 +77,12 @@ if (BOOK.amazonUrl) {
   link.href = BOOK.amazonUrl; link.hidden = false;
   if (BOOK.preorder) link.firstChild.textContent = 'Amazonで予約する ';
   document.querySelector('#release-status').hidden = true;
-  document.querySelector('#book-meta').textContent = [BOOK.price, BOOK.releaseDate].filter(Boolean).join(' ｜ ');
+  const meta = document.querySelector('#book-meta');
+  meta.textContent = '';
+  [['strong', BOOK.price], ['span', BOOK.releaseDate]].forEach(([tag, text]) => {
+    if (!text) return;
+    const el = document.createElement(tag); el.textContent = text; meta.appendChild(el);
+  });
 }
 const sticky = document.querySelector('#sticky-bar');
 const hero = document.querySelector('.hero');
