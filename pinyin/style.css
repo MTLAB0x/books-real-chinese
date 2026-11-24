@@ -84,3 +84,14 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 .purchase-copy>.button{margin-top:22px}
 @media(min-width:761px){.purchase-art{min-height:470px}.purchase-cover{width:270px;left:20px}.purchase-panda{width:185px;right:0;bottom:0}}
 @media(max-width:760px){.purchase h2{font-size:clamp(28px,8.6vw,50px);line-height:1.42}.button.red{font-size:16px;padding:16px 24px;min-height:58px}.book-meta strong{font-size:17px}}
+/* author: books */
+.author-books{padding:22px 0;border-bottom:1px dashed #d3c9ba}
+.author-books-title{font-size:13px!important;font-weight:700;letter-spacing:.06em;margin:0 0 14px}
+.author-books ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.author-books li{display:flex;flex-direction:column;gap:10px;font-size:12px;line-height:1.6}
+.author-books img{width:100%;max-width:120px;height:auto;border-radius:3px;box-shadow:0 6px 14px rgba(59,55,52,.18)}
+.author-books span{display:block}
+.author-books b{display:block;font-size:13px;line-height:1.5}
+.author-books small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.author-books .no-cover{justify-content:flex-end}
+@media(max-width:760px){.author-books ul{gap:12px}.author-books img{max-width:92px}}
