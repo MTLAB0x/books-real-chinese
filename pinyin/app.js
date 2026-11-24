@@ -1,6 +1,6 @@
 // Set verified release details here when the book is ready for sale.
 // preorder: true while the book is on pre-order (button reads 「Amazonで予約する」). Set it to false on release day.
-const BOOK = { amazonUrl: 'https://www.amazon.co.jp/dp/B0HSQPVJ7K', price: '', releaseDate: '2026年12月26日発売　予約受付中', preorder: true };
+const BOOK = { amazonUrl: 'https://www.amazon.co.jp/dp/B0HSQPVJ7K', price: '発売記念価格 500円', releaseDate: '2026年12月26日発売　予約受付中', preorder: true };
 const audio = new Audio();
 audio.preload = 'none';
 let activeButton = null;
