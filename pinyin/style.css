@@ -54,3 +54,18 @@ h1,h2,h3{text-wrap:balance;word-break:auto-phrase}
 @media(max-width:760px){.conversation-panda>span{margin:4px 0 0;padding:8px 16px;font-size:13px}}
 .header nav a{min-height:44px;display:inline-flex;align-items:center}
 @media(max-width:360px){.sound-chips{gap:4px}.sound-chips button{width:44px;height:44px}}
+
+/* hero key visual (2026-11): same look as the A+ images — brighter yellow, outlined heavy headline, navy band */
+.header{background:#ffd83a}
+.hero{background:linear-gradient(180deg,#ffd83a 0%,#ffd83a 45%,#f7b500 100%);color:#222}
+.hero::before{content:"你好 谢谢 再见 请问 多少钱 对不起 没关系 好吃 你好 谢谢 再见 请问 多少钱 对不起";position:absolute;left:-30px;right:-30px;top:-24px;height:100%;overflow:hidden;font:900 clamp(84px,12.5vw,180px)/1.22 'PingFang SC','Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',sans-serif;color:rgba(226,150,0,.13);word-spacing:.18em;pointer-events:none}
+.hero-inner,.hero-bottom{position:relative}
+.hero h1{font-family:'M PLUS Rounded 1c','Zen Maru Gothic','Hiragino Maru Gothic ProN',sans-serif;font-weight:900;font-size:clamp(44px,5.2vw,72px);line-height:1.36;letter-spacing:-.04em;color:#222;text-shadow:0.085em 0.000em 0 #fff,0.081em 0.026em 0 #fff,0.069em 0.050em 0 #fff,0.050em 0.069em 0 #fff,0.026em 0.081em 0 #fff,0.000em 0.085em 0 #fff,-0.026em 0.081em 0 #fff,-0.050em 0.069em 0 #fff,-0.069em 0.050em 0 #fff,-0.081em 0.026em 0 #fff,-0.085em 0.000em 0 #fff,-0.081em -0.026em 0 #fff,-0.069em -0.050em 0 #fff,-0.050em -0.069em 0 #fff,-0.026em -0.081em 0 #fff,-0.000em -0.085em 0 #fff,0.026em -0.081em 0 #fff,0.050em -0.069em 0 #fff,0.069em -0.050em 0 #fff,0.081em -0.026em 0 #fff,0.045em 0.000em 0 #fff,0.036em 0.026em 0 #fff,0.014em 0.043em 0 #fff,-0.014em 0.043em 0 #fff,-0.036em 0.026em 0 #fff,-0.045em 0.000em 0 #fff,-0.036em -0.026em 0 #fff,-0.014em -0.043em 0 #fff,0.014em -0.043em 0 #fff,0.036em -0.026em 0 #fff,0 .16em 0 rgba(0,0,0,.14)}
+.hero h1 .hero-line:last-child{color:#d9503f}
+.hero .highlight:after{display:none}
+.hero-lead{font-weight:700;color:#222}
+.hero .button.dark{background:#d9503f;box-shadow:0 5px 0 #a8382b}
+.hero-bottom{border-top:0;background:radial-gradient(rgba(255,255,255,.16) 1.5px,transparent 2px) 0 0/14px 14px,linear-gradient(160deg,#33465f,#243245);color:#fff;font-size:17px;padding:22px 20px;gap:34px}
+.hero-bottom i{background:#ffd83a}
+.hero-bottom span:last-child{color:#ffd83a}
+@media(max-width:760px){.hero h1{font-size:clamp(30px,9.4vw,54px);line-height:1.4}.hero-bottom{font-size:13px;gap:12px;padding:16px 10px}}
